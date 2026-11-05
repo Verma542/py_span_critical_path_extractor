@@ -1,0 +1,14 @@
+[project]
+name = "py-span-critical-path-extractor"
+version = "0.1.0"
+description = "Finds the sequential span chain that defines a trace's latency, skipping concurrent work."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
