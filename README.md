@@ -61,3 +61,10 @@ missing parents, duplicate ids, or a span ending before it starts.
 Times are integers in a unit of your choosing (microseconds, milliseconds,
 nanoseconds). Keep the unit consistent across a trace; the library does no
 conversion.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
